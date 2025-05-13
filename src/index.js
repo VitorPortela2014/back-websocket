@@ -32,7 +32,7 @@ socketServer.on("connection", (clientSocket) => {
 
     // Quando o cliente envia uma mensagem
     clientSocket.on("message", (messageContent) => {
-        // Emite a mensagem para todos os clientes
+                // Emite a mensagem para todos os clientes
         socketServer.emit("receive_message", {
             ...messageContent,                      // Copia os dados da mensagem
             authorId: clientSocket.id,              // Adiciona o ID do autor
